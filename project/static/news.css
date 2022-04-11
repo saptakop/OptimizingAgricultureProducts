@@ -1,0 +1,15 @@
+.my-anchor {
+    text-decoration: none;
+    font-size: 18px;
+    color:#14420a;
+}
+.my-anchor:hover {
+    font-weight: 800;
+}
+.news {
+    transition: transform .2s;
+}
+  
+.news:hover {
+    transform: scale(1.04);
+}

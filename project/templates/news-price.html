@@ -1,0 +1,83 @@
+{% extends 'base.html'  %}
+
+{% block title%} News {% endblock title%}
+
+{% block css%}
+{% load static %}
+<link rel='stylesheet' href='{% static 'news.css'%}'>
+{% endblock css%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/services">Packaging</a></li>
+            <li><a class="dropdown-item" href="/services">Organic Farming</a></li>
+            <li><a class="dropdown-item" href="/services">Delivering</a></li>
+            <li><a class="dropdown-item" href="/services">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/news">News</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock nav %}
+
+{% block body%}
+<div class='container'>
+    <div class="nav-scroller py-1 px-4 mb-2" style='background-color:#e5fcde;'>
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 my-anchor" href="/news">Latest</a>
+          <a class="p-2 my-anchor" href="/news-farmer">Farmers</a>
+          <a class="p-2 my-anchor" href="/news-schemes">New Schemes</a>
+          <a class="p-2 my-anchor" href="/news-crops">Crops</a>
+          <a class="p-2 my-anchor" href="/news-price"><strong>Price</strong></a>
+          <a class="p-2 my-anchor" href="/news-business">Business</a>
+          <a class="p-2 my-anchor" href="/news-politics">Policies</a>
+        </nav>
+      </div>
+</div>
+
+<div class='container'>
+  <div>
+      <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">01</strong>
+          <h3 class="mb-0">India's sugar exports accelerate on global price rally, weak rupee</h3>
+          <div class="mb-1 text-muted">March 11</div>
+          <p class="card-text mb-auto">Indian sugar mills signed contracts to export 550,000 tonnes of the sweetener in recent days, as surging global prices and a weak rupee made overseas sales lucrative, four dealers told Reuters.</p>
+          <a target='_blank' href="https://www.livemint.com/industry/agriculture/indias-sugar-exports-accelerate-on-global-price-rally-weak-rupee-11646967597199.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+            <img src="/static/img/sugar.jpg" width='450' height='250'>
+
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock body%}

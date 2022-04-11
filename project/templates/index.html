@@ -1,0 +1,486 @@
+{% extends 'base.html'  %}
+
+{% block title%} Home {% endblock title%}
+
+{% block css%}
+{% load static %}
+<link rel='stylesheet' href='{% static 'index3.css'%}'>
+{% endblock css%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/services">Packaging</a></li>
+            <li><a class="dropdown-item" href="/services">Organic Farming</a></li>
+            <li><a class="dropdown-item" href="/services">Delivering</a></li>
+            <li><a class="dropdown-item" href="/services">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news">News</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+{% endblock nav %}
+
+{% block body%}
+<!-- Heading starts -->
+{% comment %} <div class='container-fluid'>
+  <div class='head-col'>
+    <h2>It's time for us to</h2>
+    <h1> Go Green and Spread Greenery</h1>
+    <p>Agriculture is the art and science of cultivating the soil, growing crops and raising livestock. 
+      Agriculture provides most of the world's food and fabrics.</p>
+  </div>
+  <div class='head-col'>
+    <img align='right' src='/static/img/tree.jpg' height='500px' alt='tree'>
+  </div>
+</div> {% endcomment %}
+<div id="tm-video-container" style='clear:both;'>
+  <div class='head-col'>
+    <h2>It's time for us to</h2>
+    <h1> Go Green and Spread Greenery</h1>
+    <p>Agriculture is the art and science of cultivating the soil, growing crops and raising livestock. 
+      Agriculture provides most of the world's food and fabrics.</p>
+  </div>
+  <video autoplay muted loop id="tm-video">
+    <source src="/static/video/wheat-field.mp4" type="video/mp4">
+  </video>    
+</div> 
+<!-- Heading Ends -->
+
+<!-- About Indian Agriculture Starts-->
+<div class="container px-4 py-5 my-5" id="featured-3" style='background-color:#e5fcde; color:#14420a; clear:both;'>
+  <h4> Indian AgriCulture  </h4>
+  <h1 class="pb-2 border-bottom">Meet The Nature HalfWay</h1>
+  <a target='_blank' href='https://www.economicsdiscussion.net/articles/8-main-features-of-indian-agriculture-explained/2260'><h5 style='text-align:right; padding-right:20px'> View More -> </h5></a>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <div>
+        01.
+      </div>
+      <h2>Farmers</h2>
+      <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      <a target='_blank' href="https://farmer.gov.in" class="icon-link">
+        Read More &#8594;
+      </a>
+    </div>
+    <div class="feature col">
+      <div>
+        02.
+      </div>
+      <h2>Organic Farming</h2>
+      <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      <a target='_blank' href="https://www.tractorjunction.com/blog/organic-farming-in-india-types-methods-advantages/" class="icon-link">
+        Read More &#8594;
+      </a>
+    </div>
+    <div class="feature col">
+      <div >
+        03.
+      </div>
+      <h2>Livelihood</h2>
+      <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      <a target='_blank' href="https://journalofeconomicstructures.springeropen.com/articles/10.1186/s40008-019-0141-7" class="icon-link">
+        Read More &#8594;
+      </a>
+    </div>
+  </div>
+</div>
+<!-- About Indian Agriculture Ends-->
+
+<div style='height:50px'>
+</div>
+
+<!-- Few words about us-->
+<div class='row2'>
+  <div class='col21'>
+    <img src='/static/img/agri.jpg' height='420px' width='100%'>
+  </div>
+  <div class='col22'>
+    <h3> Welcome </h3>
+    <h1> A Few Words About Us </h1>
+    <p style='color:black'> <strong>We are B.Tech students from Government College of Engineering & Textile Technology, Serampore.</strong><p>
+    <p style='color:black'> We are making this website in order to complete our final year project.
+      Here we are also using machine learning algorithm to predict which crop to harvest at which time,
+      in order to help our farmers in harvesting. </p>
+      <button type="button" class="btn btn-success">Read More</button>
+  </div>
+</div>
+<!-- Few words about us ends-->
+
+{% comment %} <div class='container-fluid'>
+<img src='/static/img/harvest.jpg' width='100%' height='400px'>
+</div> {% endcomment %}
+
+<div style='height:30px'>
+</div>
+
+<h1 style='text-align:center'> Types of Farming </h1>
+<h4 style='text-align:center'> In India </h4>
+<h4 style='text-align:center'> &#8595 </h4>
+<a target='_blank' href='https://www.tractorjunction.com/blog/types-of-farming-in-india-procedure-benefits-and-role/'><h5 style='text-align:right; padding-right:20px'> View In Detail -> </h5></a>
+
+<!-- Types of Farming-->
+<div class='row-type'>
+  <div class='col-type'>
+    <img src='/static/img/sub-farm.jpg' height='300px' width='600px'>
+  </div>
+  <div class='col-type' style='padding-top:100px; padding-left:10px'>
+    <h5 style='color:#14420a;'>01.</h5>
+    <h1 style='color:#14420a;'>Subsistence Farming</h1>
+    <p>Subsistence farming, form of farming in which nearly all of the crops or livestock raised are used to maintain the farmer and the farmer’s family, leaving little, if any, surplus for sale or trade. Preindustrial agricultural peoples throughout the world have traditionally practiced subsistence farming.</p>
+  </div>
+</div>
+
+<div style='height:30px; clear:both;'>
+</div>
+
+<div class='row-type'>
+  <div class='col-type' style='padding-top:100px'>
+    <h5 style='color:#14420a;'>02.</h5>
+    <h1 style='color:#14420a;'>Commercial Farming</h1>
+    <p>The Commercial farming meaning is that where farmer producing crops on a large scale. It is a type of agribusiness where farmers raise crops and livestock to make money by selling them in the market. As we know marginal farmers are raising crops to take care of their livelihood. On the other side, farming business owners raise crops or livestock on large scale to make a profit from it.</p>
+  </div>
+  <div class='col-type' style='padding-left:10px'>
+    <img align='right' src='/static/img/com-farm.jpg' height='300px' width='600px'>
+  </div>
+</div>
+
+<div style='height:30px; clear:both;'>
+</div>
+
+<div class='row-type'>
+  <div class='col-type'>
+    <img src='/static/img/home-farm.jpg' height='300px' width='600px'>
+  </div>
+  <div class='col-type' style='padding-top:100px; padding-left:10px'>
+    <h5 style='color:#14420a;'>03.</h5>
+    <h1 style='color:#14420a;'>Home Farming</h1>
+    <p>Home farming includes a wide array of food-producing projects and activities. And with the recent resurgence of farming in and around cities, people have been reconnecting to agriculture by growing food themselves and visiting farmer’s markets. This fast-growing phenomenon has the potential to nourish communities and create economic opportunities.</p>
+  </div>
+</div>
+
+<div style='height:30px; clear:both;'>
+</div>
+<!-- Types of Farming Ends -->
+
+<!-- Carousel-->
+<div class='container-fluid px-0'>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/img/caro1.jpg" width='1100' height='450' class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4>India, Rich in Agricultural Production</h4>
+          <p>India is one of the largest country in the world in agriculture production in almost every crops.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/caro2.jpg" width='1100' height='450' class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/caro3.jpg" width='1100' height='450' class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!-- Carousel Ends-->
+
+<div style='height:30px'>
+</div>
+
+<h1 style='text-align:center'> Our Services </h1>
+<h4 style='text-align:center'> Is To Provide </h4>
+<h4 style='text-align:center'> &#8595 </h4>
+<a href='#'><h5 style='text-align:right; padding-right:20px'> View All Services -> </h5></a>
+
+<!--Our Services-->
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm" style='background-color:#e5fcde'>
+          <img src='/static/img/packaging.jpg' width="100%" height="225">
+          <div class="card-body">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div style='border:solid 1px black; background-color:#9ceb8a; padding:5px'>
+                Packaging
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm" style='background-color:#e5fcde'>
+          <img src='/static/img/organic.jpg' width="100%" height="225">
+          <div class="card-body">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div style='border:solid 1px black; background-color:#9ceb8a; padding:5px'>
+                Organic Farming
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm" style='background-color:#e5fcde'>
+          <img src='/static/img/delivery.jpg' width="100%" height="225">
+          <div class="card-body">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div style='border:solid 1px black; background-color:#9ceb8a; padding:5px'>
+                Delivering
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Our Services Ends -->
+
+<div style='height:30px'>
+</div>
+
+<div class='container'>
+  <div class="row p-4 p-md-5 mb-4 text-white rounded" style='background-color:#e5fcde'>
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic" style='color:#14420a'>India Is One of The Largest Agriculture Production Country</h1>
+      <p class="lead my-3" style='color:black'>Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+      <p class="lead mb-0" style='color:black'><a target='_blank' href="https://prsindia.org/policy/analytical-reports/state-agriculture-india" class=" fw-bold">Continue reading...</a></p>
+    </div>
+
+    {% comment %} <div class="col-md-6 px-0">
+      <img align:'right' src='/static/img/agri2.jpg' width='300' height='300'>
+    </div> {% endcomment %}
+
+  </div>
+</div>
+
+<!-- Crops Rank-->
+<div class='container'>
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style='background-color:#e5fcde'>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">01</strong>
+          <h3 class="mb-0" style='color:#14420a'>Milk</h3>
+          <div class="mb-1 text-muted">Rank 1</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="https://en.wikipedia.org/wiki/Dairy_in_India" target='_blank' class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src='/static/img/milk.jpg' width='250' height='250'>  
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style='background-color:#e5fcde'>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">02</strong>
+          <h3 class="mb-0" style='color:#14420a'>Pulses</h3>
+          <div class="mb-1 text-muted">Rank 1</div>
+          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="https://vikaspedia.in/agriculture/crop-production/package-of-practices/pulses/pulses-in-india" target='_blank' class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src='/static/img/pulses.jpg' width='250' height='250'> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style='background-color:#e5fcde'>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">03</strong>
+          <h3 class="mb-0" style='color:#14420a'>Jute</h3>
+          <div class="mb-1 text-muted">Rank 1</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="https://en.wikipedia.org/wiki/Jute_cultivation" target='_blank' class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src='/static/img/jute.jpg' width='250' height='250'> 
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style='background-color:#e5fcde'>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">04</strong>
+          <h3 class="mb-0" style='color:#14420a'>Rice</h3>
+          <div class="mb-1 text-muted">Rank 2</div>
+          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="https://en.wikipedia.org/wiki/Rice_production_in_India" target='_blank' class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src='/static/img/rice.jpg' width='250' height='250'> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style='background-color:#e5fcde'>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">05</strong>
+          <h3 class="mb-0" style='color:#14420a'>Wheat</h3>
+          <div class="mb-1 text-muted">Rank 2</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="https://farmer.gov.in/m_cropstaticswheat.aspx" target='_blank' class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src='/static/img/wheat.jpg' width='250' height='250'> 
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style='background-color:#e5fcde'>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">06</strong>
+          <h3 class="mb-0" style='color:#14420a'>SugarCane</h3>
+          <div class="mb-1 text-muted">Rank 2</div>
+          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="https://farmer.gov.in/cropstaticssugarcane.aspx" target='_blank' class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src='/static/img/sugarcane.png' width='250' height='250'> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Crops Rank ends-->
+
+<!-- Form-->
+<div class='container mb-5'>
+  <h1 class='text-center'>Write to Us</h1>
+
+  <form method='post' action='/'>
+      {% csrf_token %}
+      <div class="form-group mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name='name' placeholder="Enter Your Name">
+      </div>
+      <div class="form-group mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name='email' placeholder="Enter Your Email">
+      </div>
+      <div class="form-group mb-3">
+          <label for="desc" class="form-label">Write Your Message</label>
+          <textarea class="form-control" id="desc" rows="6" name='desc' placeholder='Type Your Message...'></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<!-- Form Ends -->
+
+<!-- Recent Comments-->
+<div class='container'>
+  <div class='container' style='background-color:#e5fcde'>
+    <h2 class="pb-2 border-bottom">Our Recent Comments</h2>
+  </div>
+<!-- Recent Comments Ends-->
+
+<!-- Show Comment-->
+<div class='row-comment'>
+  <div class='col-comment'> 
+    <img class="m-2" src='/static/img/profile-logo1.png' height='50' width='50'>
+    <div>
+      <div class='sub-name-comment'>
+        <h3 class='m-2'> {{name1}} </h3>
+      </div>
+      <div class='sub-name-comment sub-date-comment'>
+        <span> {{date1}} </span>
+      </div>
+    </div>
+    <div class="m-2 sub-email-comment">{{email1}}</div>
+    <p class="m-2">{{desc1}}</p>
+  </div>
+
+  <div class='col-comment'> 
+    <img class="m-2" src='/static/img/profile-logo1.png' height='50' width='50'>
+    <div>
+      <div class='sub-name-comment'>
+        <h3 class='m-2'> {{name2}} </h3>
+      </div>
+      <div class='sub-name-comment sub-date-comment'>
+        <span> {{date2}} </span>
+      </div>
+    </div>
+    <div class="m-2 sub-email-comment">{{email2}}</div>
+    <p class="m-2">{{desc2}}</p>
+  </div>
+
+  <div class='col-comment'> 
+    <img class="m-2" src='/static/img/profile-logo1.png' height='50' width='50'>
+    <div>
+      <div class='sub-name-comment'>
+        <h3 class='m-2'> {{name3}} </h3>
+      </div>
+      <div class='sub-name-comment sub-date-comment'>
+        <span> {{date3}} </span>
+      </div>
+    </div>
+    <div class="m-2 sub-email-comment">{{email3}}</div>
+    <p class="m-2">{{desc3}}</p>
+  </div>
+</div>
+<!-- Show Comment Ends-->
+
+
+</div>
+{% endblock body%}

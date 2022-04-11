@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title%} About {% endblock title%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/services">Packaging</a></li>
+            <li><a class="dropdown-item" href="/services">Organic Farming</a></li>
+            <li><a class="dropdown-item" href="/services">Delivering</a></li>
+            <li><a class="dropdown-item" href="/services">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news">News</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock nav %}
+
+{% block body%}
+
+<div class='container'>
+    <div class="p-5 mb-4 rounded-3" style='background-color:#e5fcde;'>
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">About Us</h1>
+          <p class="col-md-8 fs-4"> Who we are and What we do. How did we come with such an idea, our vision and so many things.</p>
+        </div>
+      </div>
+</div>
+
+<div class='container'>
+    <div class="row">
+        <div class="col-lg-4" style='text-align:center;'>
+            <img class='rounded-circle' width='140' height='140' src='/static/img/rajdip-photo.png'>    
+          <h2 class='mb-1'>Rajdip Pal</h2>
+          <h6 style='color:#808080;'>Senior Project Manager</h6>
+          <p></p>
+          My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        
+        <div class="col-lg-4" style='text-align:center;'>
+            <img class='rounded-circle' width='140' height='140' src='/static/img/mistri-photo.png'>    
+          <h2 class='mb-1'>Rajdeep Mistri</h2>
+          <h6 style='color:#808080;'>Senior Project Manager</h6>
+          <p></p>
+          My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+
+        <div class="col-lg-4" style='text-align:center;'>
+            <img class='rounded-circle' width='140' height='140' src='/static/img/partha-photo.png'>    
+          <h2 class='mb-1'>Partho Barui</h2>
+          <h6 style='color:#808080;'>Senior Project Manager</h6>
+          <p></p>
+          My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+    </div>
+
+    <div style='height:30px;'>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4" style='text-align:center;'>
+          <img class='rounded-circle' width='140' height='140' src='/static/img/saptak-photo.png'>    
+        <h2 class='mb-1'>Saptak Biswas</h2>
+        <h6 style='color:#808080;'>Senior Project Manager</h6>
+        <p></p>
+        My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div>
+      
+      <div class="col-lg-4" style='text-align:center;'>
+          <img class='rounded-circle' width='140' height='140' src='/static/img/joydip-photo.png'>    
+        <h2 class='mb-1'>Joydeep Mondal</h2>
+        <h6 style='color:#808080;'>Senior Project Manager</h6>
+        <p></p>
+        My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div>
+
+      <div class="col-lg-4" style='text-align:center;'>
+        <img class='rounded-circle' width='140' height='140' src='/static/img/pri-photo.png'>    
+      <h2 class='mb-1'>Priyanka Pal</h2>
+      <h6 style='color:#808080;'>Senior Project Manager</h6>
+      <p></p>
+      My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.My name is Rajdip Pal.</p>
+      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+    </div>
+
+    </div>
+    
+</div>
+{% endblock body%}

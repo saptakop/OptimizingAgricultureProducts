@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FAQ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" charset="utf-8"></script>
+  <!-- CSS file 
+  <link rel="stylesheet" href="style.css">-->
+  <style media="screen">
+    body{
+      margin:0;
+      padding:0;
+    }
+
+    .accordions {
+      width: 80%;
+      margin: 100px auto;
+    }
+
+    .accordions h3 {
+      text-align: center;
+      font-weight: bold;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .accordion-item {
+      background-color: #0b3891;
+      border-radius: 5px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      border: 1px solid #100e34;
+    }
+
+    .accordion-item .accordion-title {
+      cursor: pointer;
+      padding: 20px;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .accordion-item .accordion-title.active-title {
+      background-color: #100e34;
+      color: #ffffff;
+    }
+
+    .accordion-item .accordion-title h3 {
+      font-weight: 700;
+      margin: 0;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+    }
+
+    .accordion-item .accordion-title i.fa-chevron-down {
+      transform: rotate(0);
+      transition: 0.4s;
+    }
+
+    .accordion-item .accordion-title i.fa-chevron-down.chevron-top {
+      transform: rotate(-180deg);
+      color: #fa5019;
+    }
+
+    .accordion-item .accordion-content {
+      display: none;
+      line-height: 1.7;
+      color: #100e34;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .accordion-item .accordion-content.active {
+      display: block;
+    }
+
+    .accordion-item .accordion-content p {
+      margin: 0;
+      font-size: 16px;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .details {
+      background: #dce1f2;
+    }
+
+    .details .detailed_info {
+      margin: 50px auto;
+    }
+
+    .details img {
+      margin: 0 auto;
+      display: block;
+    }
+
+    .details h3 {
+      font-weight: bold;
+      font-size: 20px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .details p {
+      font-size: 16px;
+      line-height: 1.5em;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .details ul li {
+      font-size: 16px;
+      line-height: 1.7em;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .first {
+      background-color: aquamarine;
+      font-size: bold;
+    }
+
+    #second{
+      height:20%;
+      width:100%;
+      margin:0 auto;
+    }
+    .navbar-collapse{
+      flex-grow: 0;
+  }
+  .footer-row {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.footer-col {
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+}
+#footer-follow {
+    text-align: right;
+    padding-right: 70px;
+    
+}
+#social-icons {
+    clear: both;
+    text-align: right;
+    padding-right: 40px;
+}
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/services">Packaging</a></li>
+                <li><a class="dropdown-item" href="/services">Organic Farming</a></li>
+                <li><a class="dropdown-item" href="/services">Delivering</a></li>
+                <li><a class="dropdown-item" href="/services">Planting</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/project">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/news">News</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <img src="/static/img/faq.jpg" id="second">
+
+  <section id="faq">
+    <div class="container faq">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="accordions">
+
+              <!-- 1st accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item4">
+                  <h3>1. What is farming agreement? <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item4">
+                  <p class="first">
+                    Farming agreement is an agreement between farmer/FPO and Sponsor through
+                    which both partners agree in advance on the terms and conditions for the production and
+                    marketing of farm products. Third parties like farm services provider and aggregators may
+                    also join such agreement.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 2nd accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item2">
+                  <h3>2. What are various kinds of farming agreements?<i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item2">
+                  <p class="first">
+                    Farming agreements can be agreements for purchase of future farming produce
+                    with risk of production remaining with the farmer or for payment of service charges to
+                    farmers where risk of production is borne by the sponsor/buyer. There can be a
+                    combination also. The sponsor may also agree to supply inputs or technology during the
+                    process of production.
+
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3rd accordion menu -->
+              <div class="accordion-item">
+
+
+                <div class="accordion-title" data-tab="item3">
+                  <h3>3. Why farming agreement is to be made popular among the farmers?<i
+                      class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item3">
+                  <p class="first">
+                    Earlier, contract farming has been in existence for decades. However, the farming
+                    agreement is to be made popular because of its uniqueness with reference to
+                    Equity or inclusiveness (to attract more investments in the agriculture sector and promote
+                    inclusiveness)
+                    Public Accountability (introducing system of e-registration and dispute resolution) and
+                    Innovation (as both the market and inputs will be available to the farmer at farm gate
+                    level).
+                  </p>
+                </div>
+              </div>
+
+              <!-- 4th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item1">
+                  <h3>4. What the farming agreement stipulates?<i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item1">
+                  <p class="first">
+                    The farming agreement may stipulate the timely supply of inputs by the sponsor to
+                    the farmer before the start of cropping season to carry out farming operations, the farmer
+                    will supply the products at the farm gate or mutually agreed other place at agreed price.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 5th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item5">
+                  <h3>5. What are the benefits of farming agreement for smallholders?<i class="fa fa-chevron-down"></i>
+                  </h3>
+                </div>
+                <div class="accordion-content" id="item5">
+                  <p class="first">
+                    Farming agreement gives smallholder farmers the possibility of knowing in advance
+                    when, to whom and at what price they will sell their products. This helps to reduce the
+                    unpredictability of agriculture and allows them to better plan their production. When
+                    sponsor also provides access to inputs including technical assistance, farming agreement
+                    can lead to significantly increased yields and profits.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 6th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item6">
+                  <h3>6. What are the major advantages to farmer/FPO under farming agreement? <i
+                      class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item6">
+                  <p class="first">
+                    The various advantages include: easier access to inputs, services and credit
+                    improved production and management skills, secure market, more stable income etc.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 7th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item7">
+                  <h3>7. What are the good practices involved in preparing the farming agreement?<i
+                      class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item7">
+                  <p class="first">
+                    The whole agreement formation process should be carried out in a fair and
+                    transparent manner and in good faith. A good practice is for farmers to be involved in
+                    discussions with the sponsor from the beginning of the negotiation and contract formation
+                    phases, to make sure they understand all the conditions included in the Agreement, and to
+                    ensure that their interests and rights are considered.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 8th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item8">
+                  <h3>8. What are the major obligations of farmer and sponsor in the farming agreement?<i
+                      class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item8">
+                  <p class="first">
+                    In general, the farmer’s main obligation is to produce and deliver the goods in
+                    accordance with the agreement and the sponsor’s main obligation is to pay the agreed
+                    price in return for the goods provided by the farmer.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 9th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item9">
+                  <h3>9. How long does an Agreement last? <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item9">
+                  <p class="first">
+                    The minimum period of the farming agreement shall be for one crop season or one
+                    production cycle of livestock, as the case may be, and the maximum period shall be five
+                    years. However, in case of horticultural crops like fruits, nuts, spices etc., where the
+                    production cycle is longer, it may go beyond five years.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 10th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item10">
+                  <h3>10. What are the common solutions to address force majeure in farming agreement? <i
+                      class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item10">
+                  <p class="first">
+                    In the event of a force majeure and/or the change in the policy of government, the
+                    affected party, to the extent of adverse impact, shall not be bound to honour the
+                    agreement and can accordingly alter the terms with mutual consent or terminate the
+                    agreement.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 11th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item11">
+                  <h3>11. How the parties negotiate in terms of inputs and outputs in farming agreement? <i
+                      class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item11">
+                  <p class="first">
+                    Standard template will be available in the model farming agreements. Parties may
+                    negotiate on agricultural practices, supply of and use of specific inputs, price determination
+                    mechanism, quality grade and standards, mode and place of delivery and timely payment.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 12th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item12">
+                  <h3>12. How the prices are determined in the farming agreement? <i class="fa fa-chevron-down"></i>
+                  </h3>
+                </div>
+                <div class="accordion-content" id="item12">
+                  <p class="first">
+                    There should be more transparency in the price determination of output. The
+                    parties may negotiate in order to agree to a price, and both sides are expected to honour
+                    this agreement. The price to be paid for the purchase of a farming produce has to be
+                    determined and mentioned in the farming agreement itself. In case of variable price then
+                    the provisions of the Act have to be strictly followed. The methodology for calculating
+                    guaranteed price or additional price must be annexed to the agreement.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 13th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item13">
+                  <h3>13. Who is responsible for inspecting the quality of produce? <i class="fa fa-chevron-down"></i>
+                  </h3>
+                </div>
+                <div class="accordion-content" id="item13">
+                  <p class="first">
+                    It shall be the responsibility of the Sponsor to inspect the quality or any other
+                    feature of such produce as specified in the farming agreement before accepting the
+                    delivery at the farm gate; otherwise, he shall be deemed to have inspected the produce
+                    and shall have no right to retract from acceptance of such produce at the time of its
+                    delivery or thereafter. In case the agreement provides for inspection by third party then
+                    such third party may inspect the produce.
+                  </p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid" style="background-color:rgb(33,37,41); clear:both;">
+    <footer class="py-5">
+      <div class="row px-5">
+        <div class="col-2">
+          <h3 style="color:white; margin-bottom:20px">Contact Info</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2" style='color:white'>42 Avenue ParkStreet Road</li>
+            <li class="nav-item mb-2" style='color:white'> Kolkata, 700001</li>
+            <li class="nav-item mb-2" style='color:white'>033-7878-0987</li>
+            <li class="nav-item mb-2" style='color:white'>contactus@gmail.com</li>
+            <li class="nav-item mb-2" style='color:white'>contactme@gmail.com</li>
+          </ul>
+        </div>
+  
+        <div class="col-2">
+          <h3 style="color:white; margin-bottom:20px;">Quick Links</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2" style='color:white'>Home</li>
+            <li class="nav-item mb-2" style='color:white'>About</li>
+            <li class="nav-item mb-2" style='color:white'>Projects</li>
+            <li class="nav-item mb-2" style='color:white'>FAQ</li>
+            <li class="nav-item mb-2" style='color:white'>Contact</li>
+          </ul>
+        </div>
+  
+        <div class="col-2">
+          <h3 style="color:white; margin-bottom:20px">Our Services</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2" style='color:white'>Packaging</li>
+            <li class="nav-item mb-2" style='color:white'>Organnic Farming</li>
+            <li class="nav-item mb-2" style='color:white'>Delivering</li>
+            <li class="nav-item mb-2" style='color:white'>Planting</li>
+          </ul>
+        </div>
+  
+        <div class="col-4 offset-1">
+          <form>
+            <h5 style="color:white">Subscribe to our newsletter</h5>
+            <p style="color:white"> Monthly digest of whats new and exciting from us.</p>
+            <div class="d-flex w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn" style='background-color:#7df57f' type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr style='color:white'>
+  
+      {% comment %} <div class="d-flex justify-content-between py-4 my-4 border-top">
+        <p style="color:white">© 2022 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <span style='color:white;'>Follow Us On</span><br>
+          <li class="ms-3" style='padding-top:20px'><a class="link-dark" href="#"><img src='/static/img/twitter.png'></a></li>
+          <li class="ms-3" style='padding-top:20px'><a class="link-dark" href='#'><img src='/static/img/facebook.png'></a></li>
+          <li class="ms-3" style='padding-top:20px'><a class="link-dark" href="#"><img src='/static/img/instagram.png'></a></li>
+        </ul>
+      </div> {% endcomment %}
+
+      <div class='footer-row' style='color:white'>
+        <div class='footer-col'>
+          &copy; 2022 Company, Inc. All Rights Reserved.
+        </div>
+        <div id='footer-follow' class='footer-col'>
+          <p>Follow Us On<p>
+        </div>
+      </div>
+      <div id='social-icons'>
+        <a class="link-dark" target='_blank' href="https://twitter.com/AgriGoI?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src='/static/img/twitter.png'></a>
+        <a class="link-dark" target='_blank' href='https://www.facebook.com/pages/category/Interest/Agriculture-328456220583/'><img src='/static/img/facebook.png'></a>
+        <a class="link-dark" target='_blank' href="https://www.instagram.com/agrigoi/?hl=en"><img src='/static/img/instagram.png'></a>
+      </div>
+
+    </footer>
+  </div>
+  <!-- JavaScript-->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".accordion-title").click(function (e) {
+        var accordionitem = $(this).attr("data-tab");
+        $("#" + accordionitem)
+          .slideToggle()
+          .parent()
+          .siblings()
+          .find(".accordion-content")
+          .slideUp();
+
+        $(this).toggleClass("active-title");
+        $("#" + accordionitem)
+          .parent()
+          .siblings()
+          .find(".accordion-title")
+          .removeClass("active-title");
+
+        $("i.fa-chevron-down", this).toggleClass("chevron-top");
+        $("#" + accordionitem)
+          .parent()
+          .siblings()
+          .find(".accordion-title i.fa-chevron-down")
+          .removeClass("chevron-top");
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/services">Packaging</a></li>
+            <li><a class="dropdown-item" href="/services">Organic Farming</a></li>
+            <li><a class="dropdown-item" href="/services">Delivering</a></li>
+            <li><a class="dropdown-item" href="/services">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news">News</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock nav %}
+
+{% block body%}
+<div>
+  <img src="/static/img/pome1.jpg" width="100%" height="500px">
+</div>
+<div class='container' style="font-family: 'Times New Roman', Times, serif;">
+  <div>
+    <img src="/static/img/pome2.jpg" width='500' height='300px' style='float:right;padding:20px 0px 0px 30px;'>
+  </div>
+  <div>
+    <p><h1>The Ultimate Guide For Pomegranate Farming</h1></p>
+    <p>Pomegranate (Punica granatum L.) is an important fruit crop grown in India. It originated in Iran, and extensively Pomegranate farming is done in the Mediterranean countries like Spain, Morocco, Egypt, Iran, Afghanistan, and Baluchistan. It is cultivated to some extort in Myanmar, China, the USA, and India.</p>
+    <p>India ranks first in pomegranate cultivation in the world. In India, major pomegranate producing states are Maharashtra, Karnataka, Gujarat, Andhra Pradesh, Madhya Pradesh, Tamil Nadu Rajasthan.Maharashtra leads with 90 thousand ha areas with an annual production of 9.45 lakh Mt tones and 10.5 Mt/ha productivity. Maharashtra state accounts for 78 percent of India’s total area and 84 percent of its total production. Pomegranate is one of the most favorite table fruits. The fresh fruits are used for table purposes. They can also prepare processed products like juice, syrup, squash, jelly, anar rub, juice concentrates, carbonated cold-drinks, and anar dana tablets, acids, etc.
+         Pomegranate fruit is nutritious, rich in minerals, vitamins, and proteins. The juice is useful for leprosy suffering patients.
+    </p>
+    
+    <img src="/static/img/pome3.jpg" width='500' height='300px' style='float:left;padding:20px 50px 20px 0px;margin-top:20px;'>
+    <h1>Propagation Method</h1>
+    <p>Pomegranate plants can be commercially propagated through hardwood cutting, air layering, and tissue culture.t easy method, but its success rate is lesser, so this method is not popular among farmers. For Cutting selected from a one-year-old tree of 9 to 12 inches (25 to 30 cm) long, 4-5 buds are better for higher rooting and survival.It’s the most common practice by farmers for 
+          raising new plants. For the air layering method, select  2 to 3 years old plants and air-layered followed by IBA (1,500 to 2,500 ppm) treatment for better rooting.From a single plant, around 150 to 200 rooted cuttings can be obtained.The rainy season is best suited for layering. It takes around 30 days for roots. After 45 days, the layered plants should be detached from the mother plant.Expert Pomegranate grower identifies detach time by the observing colour of roots when it starts to turn brown the layered cuttings are separated.
+           Then these are grown in polybags and kept for hardening up to 90 days under a shade net or Greenhouse.Tissue culture is an advance and rapid technique of the multiplication of plants. By using this technique, you can obtain diseases free planting material within a short time span.This plant is available in the Pomegranate plant nursery; buy this plant from a reliable source.
+    </p>    
+  </div>
+</div>
+{% endblock body%}

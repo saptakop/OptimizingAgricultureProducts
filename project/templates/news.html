@@ -1,0 +1,219 @@
+{% extends 'base.html'  %}
+
+{% block title%} News {% endblock title%}
+
+{% block css%}
+{% load static %}
+<link rel='stylesheet' href='{% static 'news.css'%}'>
+{% endblock css%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/services">Packaging</a></li>
+            <li><a class="dropdown-item" href="/services">Organic Farming</a></li>
+            <li><a class="dropdown-item" href="/services">Delivering</a></li>
+            <li><a class="dropdown-item" href="/services">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/news">News</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock nav %}
+
+{% block body%}
+<div class='container'>
+    <div class="nav-scroller py-1 px-4 mb-2" style='background-color:#e5fcde;'>
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 my-anchor" href="#"><strong>Latest</strong></a>
+          <a class="p-2 my-anchor" href="/news-farmer">Farmers</a>
+          <a class="p-2 my-anchor" href="/news-schemes">New Schemes</a>
+          <a class="p-2 my-anchor" href="/news-crops">Crops</a>
+          <a class="p-2 my-anchor" href="/news-price">Price</a>
+          <a class="p-2 my-anchor" href="/news-business">Business</a>
+          <a class="p-2 my-anchor" href="/news-politics">Policies</a>
+        </nav>
+      </div>
+</div>
+
+<div class='container'>
+    <div>
+        <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">01</strong>
+            <h3 class="mb-0">India's sugar exports accelerate on global price rally, weak rupee</h3>
+            <div class="mb-1 text-muted">March 11</div>
+            <p class="card-text mb-auto">Indian sugar mills signed contracts to export 550,000 tonnes of the sweetener in recent days, as surging global prices and a weak rupee made overseas sales lucrative, four dealers told Reuters.</p>
+            <a target='_blank' href="https://www.livemint.com/industry/agriculture/indias-sugar-exports-accelerate-on-global-price-rally-weak-rupee-11646967597199.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img src="/static/img/sugar.jpg" width='450' height='250'>
+  
+          </div>
+        </div>
+      </div>
+</div>
+<div class='container'>
+    <div>
+        <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">02</strong>
+            <h3 class="mb-0">Russia-Ukraine conflict ‘increasing uncertainty’ of agri supply</h3>
+            <div class="mb-1 text-muted">March 11</div>
+            <p class="card-text mb-auto">Russia’s recent military action in Ukraine significantly increased the uncertainty of agricultural supply and demand, a report World Agricultural Supply and Demand Estimates by the US Department of Agriculture said.</p>
+            <a target='_blank' href="https://www.livemint.com/industry/agriculture/russiaukraine-conflict-increasing-uncertainty-of-agri-supply-demand-globall-11646929741695.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img src="/static/img/uncertainty.jpeg" width='450' height='250'>
+  
+          </div>
+        </div>
+      </div>
+</div>
+<div class='container'>
+    <div>
+        <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">03</strong>
+            <h3 class="mb-0">India set to export record 7 million tonnes wheat this year</h3>
+            <div class="mb-1 text-muted">March 10</div>
+            <p class="card-text mb-auto">India is set to export a record 7 million tonnes of wheat this year as a rally in global prices gives the world's second biggest producer of the grain an opportunity to gain market share, a top government official said.</p>
+            <a target='_blank' href="https://www.livemint.com/industry/agriculture/india-set-to-export-record-7-million-tonnes-wheat-this-year-11646524357058.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img src="/static/img/news3.jpeg" width='450' height='250'>
+  
+          </div>
+        </div>
+      </div>
+</div>
+<div class='container'>
+    <div>
+        <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">04</strong>
+            <h3 class="mb-0">India to export record wheat if Ukraine crisis drags on</h3>
+            <div class="mb-1 text-muted">March 10</div>
+            <p class="card-text mb-auto">India is set to benefit from the shifts in global wheat trade as Russia’s invasion of Ukraine leaves a vital source of supply hanging in balance.</p>
+            <a target='_blank' href="https://www.livemint.com/industry/agriculture/india-to-export-record-wheat-if-ukraine-crisis-drags-on-11646043542458.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img src="/static/img/news4.jpeg" width='450' height='250'>
+  
+          </div>
+        </div>
+      </div>
+</div>
+<div class='container'>
+    <div>
+        <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">05</strong>
+            <h3 class="mb-0">World Bank offers ₹869 crore loan for Indian farmers</h3>
+            <div class="mb-1 text-muted">March 10</div>
+            <p class="card-text mb-auto">The Union Finance Ministry announced that the World Bank will provide ₹869 crore loan to fund a programme in India that will help national and state institutions to increase farmers' resilience to climate change.</p>
+            <a target='_blank' href="https://www.livemint.com/industry/agriculture/world-bank-offers-rs-869-crore-loan-for-watershed-management-for-indian-farmers-11645238081039.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img src="/static/img/news5.jpeg" width='450' height='250'>
+  
+          </div>
+        </div>
+      </div>
+</div>
+<div class='container'>
+    <div>
+        <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">06</strong>
+            <h3 class="mb-0">Cotton output expected to climb high global demand for textiles</h3>
+            <div class="mb-1 text-muted">March 09</div>
+            <p class="card-text mb-auto">U.S. cotton plantings are expected to climb amid strong foreign demand, higher input costs for farmers and prolonged drought in Texas.</p>
+            <a target='_blank' href="https://www.livemint.com/industry/agriculture/cotton-output-expected-to-climb-amid-high-global-demand-for-textiles-11644796050930.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img src="/static/img/news6.jpeg" width='450' height='250'>
+  
+          </div>
+        </div>
+      </div>
+</div>
+<div class='container'>
+    <div>
+        <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">07</strong>
+            <h3 class="mb-0">Climate change upsets India's apple cart</h3>
+            <div class="mb-1 text-muted">March 09</div>
+            <p class="card-text mb-auto">Apple growers may need to plant more resilient varieties. A hardier variety of ‘high density’ apple, developed in Italy, is being marketed. The jury is still out on whether it is a viable alternative.</p>
+            <a target='_blank' href="https://www.livemint.com/industry/agriculture/climate-change-upsets-india-s-apple-cart-11638893368022.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img src="/static/img/news7.jpeg" width='450' height='250'>
+  
+          </div>
+        </div>
+      </div>
+</div>
+<div class='container'>
+    <div>
+        <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">08</strong>
+            <h3 class="mb-0">For cheaper edible oil, we must go back to basics</h3>
+            <div class="mb-1 text-muted">March 08</div>
+            <p class="card-text mb-auto">India’s edible oil import bill touched a staggering ₹1.17 trillion between November 2020 and October 2021. However, India is doing little to promote native oils.</p>
+            <a target='_blank' href="https://www.livemint.com/industry/agriculture/how-can-india-solve-edible-oil-productionwoes-11637687567481.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img src="/static/img/news8.jpeg" width='450' height='250'>
+  
+          </div>
+        </div>
+      </div>
+</div>
+<div class='container'>
+    <div>
+        <div class="news row bg-light g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">09</strong>
+            <h3 class="mb-0">India unveils new rice variety to cut down on use of water, labour</h3>
+            <div class="mb-1 text-muted">March 08</div>
+            <p class="card-text mb-auto">Government scientists said the new rice varieties contain a gene that would allow farmers to spray a common, inexpensive herbicide without worrying about any side effects</p>
+            <a target='_blank' href="https://www.livemint.com/industry/agriculture/india-unveils-new-rice-variety-to-cut-down-on-use-of-water-labour-11632874400529.html" class="stretched-link my-anchor">Continue reading&#8594;</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img src="/static/img/news9.jpeg" width='450' height='250'>
+  
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock body%}
