@@ -1,0 +1,351 @@
+{% extends 'base.html'  %}
+
+{% block title%} Projects {% endblock title%}
+
+{% block css%}
+{% load static %}
+<link rel='stylesheet' href='{% static 'project.css'%}'>
+{% endblock css%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a target='_blank' class="dropdown-item" href="https://icar.gov.in/content/food-packaging-technology">Packaging</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://www.downtoearth.org.in/blog/agriculture/on-a-tardy-trail-state-of-organic-farming-in-india-73269">Organic Farming</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://india.mongabay.com/2020/05/an-online-network-emerges-during-the-lockdown-connecting-farmers-directly-with-customers/">Delivering</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://ucanr.edu/sites/UrbanAg/Production/Planting/">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news">News</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock nav %}
+
+{% block body %}
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom" style='background-color:#e5fcde'>
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <span class="fs-4">Introducing our Works</span>
+    </a>
+  </header>
+
+    <main>
+        <h1>Crops Prediction Tool</h1>
+        <p class="fs-5 col-md-8">We built a machine learning model to help you to predict which crop to harvest based on thr given constraints. We believe in helping farmer will grow nation.</p>
+
+        <div class="mb-5">
+        <a href="/project/tool" target='_blank'>Click Here to Use the Model -></a>
+        </div>
+
+        <hr class="col-3 col-md-2 ">
+    </main>
+</div>
+
+<div class='container' style='background-color:#e5fcde; color:#14420a'>
+    <h1> Some Key Factors Affecting Agriculture </h1>
+    <hr>
+</div>
+
+<div class='container'>
+    <h3 style='color:#14420a'> 1. Rainfall </h3>
+    <div style='height:10px'>
+    </div>
+    <div class='row1'>
+        <div class='col11'>
+            <img class='img' src='/static/img/rainfall1.jpeg' height='200px' width='400px'>
+        </div>
+        <div class='col12' style='background-color:#e5fcde'>
+            <p>Rain is usually seen as a benefit to crops and fields, but there is an “ideal” amount of rainfall 
+                in any given growing season for most crops. If the average rainfall is much lower or higher than 
+                the ideal, it can lead to significant problems, from drowned crops to lower yields.</p>
+        </div>
+    </div>
+
+    <div style='height:50px'>
+    </div>
+
+    <div class='row2'>
+        <div class='col21' style='background-color:#e5fcde'>
+            <p>
+                GROWTH FROM SEED:-
+                Besides disease, rainfall can also determine how fast a crop will grow from seed, including when
+                 it will be ready for harvesting. A good balance of rain and proper irrigation can lead to faster-growing
+                 plants, which can cut down on germination time.
+                <br><br>SOIL HEALTH:-
+                Soil is also greatly affected by rainfall. If it is too wet or too dry, nutrients in the soil can run off 
+                and not make it to the plants’ roots, leading to poor growth and overall health. Additionally, as 
+                mentioned previously, overwatering or too much rain can also lead to bacteria, fungus, and mold growth in the soil.
+                </p>
+        </div>
+        <div class='col22'>
+            <img class='img' align='right' src='/static/img/rainfall2.jpeg' height='200px' width='400px'>
+        </div>
+    </div>
+
+    <img class='graph m-5' src='/static/img/rainfall-graph1.jpeg' height='300px' width='500px'>
+    <img class='graph m-5' src='/static/img/rainfall-graph2.jpeg' height='300px' width='500px'>
+    <hr>
+</div>
+
+<div class='container'>
+    <h3 style='color:#14420a'> 2. Temperature </h3>
+    <div style='height:10px'>
+    </div>
+    <div class='row2'>
+        <div class='col21' style='background-color:#e5fcde'>
+            <p>The growth of plants is possible within comparatively broad temperature limits. There are three distinct 
+                fundamental temperature points of growth: minimal temperature, which is enough for growth to start; 
+                the optimal one, which is the most advantageous for growth processes; and the maximum one, where 
+                growth stops. Minimal temperatures of growth are usually a little bit higher than a point where tissue 
+                freezes, while maximum temperatures are several degrees lower than an index of thermic death. 
+                Along with that, the fundamental temperature points of growth vary depending on temperature adaptation, 
+                the development stage, the season and the time of day.</p>
+        </div>
+        <div class='col22'>
+            <img class='img' align='right' src='/static/img/temp1.jpeg' height='200px' width='400px'>
+        </div>
+    </div>
+
+    <div style='height:50px'>
+    </div> 
+
+    <div class='row1'>
+        <div class='col11'>
+            <img class='img' src='/static/img/temp2.jpeg' height='200px' width='400px'>
+        </div>
+        <div class='col12' style='background-color:#e5fcde'>
+            <p>For each plant species, due to its peculiarities and mainly owing to its geographical origin, there are specific 
+                temperature limits within which the plants are able to reproduce. For a major part of the vegetative world, 
+                a rise in temperature up to 25–28°C increases the activity of photosynthesis, and with a further increase 
+                (higher than 30°C) photorespiration starts to prevail over photosynthesis significantly. This can lead to a 
+                reduction in the weight of a plant, to a slowdown, and even to a total end to the reproduction process. 
+                There is a supposition according to which, at temperatures above 30°C, some matter necessary for growth 
+                decays quickly or is not produced in the required amounts. There are even genes in many living creatures 
+                that are “sensitive to temperature”.</p>
+        </div>
+    </div>
+
+    <img class='graph m-5' src='/static/img/temp-graph1.jpeg' height='300px' width='500px'>
+    <img class='graph m-5' src='/static/img/temp-graph2.jpeg' height='300px' width='500px'>
+    <hr>
+</div>
+
+<div class='container'>
+    <h3 style='color:#14420a'> 3. Humidity </h3>
+    <div style='height:10px'>
+    </div>
+    <div class='row1'>
+        <div class='col11'>
+            <img class='img' src='/static/img/humidity1.jpeg' height='200px' width='400px'>
+        </div>
+        <div class='col12' style='background-color:#e5fcde'>
+            <p>Humidity can be the most difficult environment factor to control in greenhouses. Even the most sophisticated 
+                environmental control equipment cannot perfectly control the humidity level in greenhouses. Humidity levels 
+                fluctuate with change in air temperature and plants are constantly transpiring, which adds water vapor to the air.
+                 In the northern climatic areas, these challenges are multiplied by many factors, of which the drier, outdoor air 
+                that is too cold to perform air exchanges.</p>
+        </div>
+    </div>
+
+    <div style='height:50px'>
+    </div>
+
+    <div class='row2'>
+        <div class='col21' style='background-color:#e5fcde'>
+            <p>Humid air directly contributes to problems such as foliar and root diseases, slow drying of the growing medium, 
+                plant stress, loss of quality, loss in yields, etc. Therefore, more pesticides are needed for disease control and 
+                plants tend to have weak, stretched growth making the plant less desirable.
+                
+                If the humidity is too low, plant growth is often compromised as crops take much longer to obtain the saleable 
+                size. Also, lower leaves often drop off, growth is hard, and overall quality is not very good. Whether the humidity 
+                is too high or too low, the loss of quality reduces the selling price of crops and increases production costs,
+                 both of which reduce profits.</p>
+        </div>
+        <div class='col22'>
+            <img class='img' align='right' src='/static/img/humidity2.jpeg' height='200px' width='400px'>
+        </div>
+    </div>
+
+    <img class='graph m-5' src='/static/img/humidity-graph1.jpeg' height='300px' width='500px'>
+    <img class='graph m-5' src='/static/img/humidity-graph2.jpeg' height='300px' width='500px'>
+    <hr>
+</div>
+
+<div class='container'>
+    <h3 style='color:#14420a'> 4. pH on Soil </h3>
+    <div style='height:10px'>
+    </div>
+    <div class='row2'>
+        <div class='col21' style='background-color:#e5fcde'>
+            <p>In fact, one of the most important parameters to calculate before growing a specific plant in a specific soil
+                is the PH value, i.e. the measurement of the acidity or alkalinity of the soil, which is defined as the negative
+                logarithm ( base 10 ) of the activity of hydronium ions ( H+ or, more precisely, H3O+aq ) in a solution. In fact, 
+               depending on their peculiarities, different plants need different pHs.</p>
+        </div>
+        <div class='col22'>
+            <img class='img' align='right' src='/static/img/ph1.jpeg' height='200px' width='400px'>
+        </div>
+    </div>
+
+    <div style='height:50px'>
+    </div>
+
+    <div class='row1'>
+        <div class='col11'>
+            <img class='img' src='/static/img/ph2.jpeg' height='200px' width='400px'>
+        </div>
+        <div class='col12' style='background-color:#e5fcde'>
+            <p>Soil pH strongly influences microbiological activity, mineral elements availability and, ultimately, the adaptability 
+                of the different plant species. The most of bacteria – from which&nbsp; nitrogen fixation, nitrification, some organic matter 
+                 decomposition process depend – prefer a sub-acid or slightly alkaline environment&nbsp; ( pH 6.8-7.2 ); the deviation 
+                from such conditions negatively affect both nutritive elements availability and&nbsp; humidification process. 
+                Mushrooms prefer an acid environment and with such conditions they ensure the demolition of organic compounds. 
+                Actinomycetes develop mainly in slightly alkaline dry, loose ( and thus rich in oxygen ) soils ( pH 7- 7.5 ),
+                 because –&nbsp; with such conditions – they are able to compensate for the lack of activity of mushrooms and 
+                other bacteria , in drought periods.</p>
+        </div>
+    </div>
+
+    <img class='graph m-5' src='/static/img/ph-graph1.jpeg' height='300px' width='500px'>
+    <img class='graph m-5' src='/static/img/ph-graph2.jpeg' height='300px' width='500px'>
+    <hr>
+</div>
+
+<div class='container'>
+    <h3 style='color:#14420a'> 5. Nitrogen on Soil </h3>
+    <div style='height:10px'>
+    </div>
+    <div class='row1'>
+        <div class='col11'>
+            <img class='img' src='/static/img/nitrogen1.jpg' height='200px' width='400px'>
+        </div>
+        <div class='col12' style='background-color:#e5fcde'>
+            <p>Nitrogen is the most essential nutrient in crop production but also one of the most challenging to work with. The compound is central 
+                to global crop production — particularly for major cereals — but while many parts of the world do not have enough to achieve food 
+                and nutrition security, in others excess nitrogen from fertilizer leaks into the environment with damaging consequences. </p>
+        </div>
+    </div>
+
+    <div style='height:50px'>
+    </div>
+
+    <div class='row2'>
+        <div class='col21' style='background-color:#e5fcde'>
+            <p>Around 78% of the Earth’s atmosphere is made up of nitrogen gas or N2 — a molecule made of two nitrogen atoms glued together 
+                by a stable, triple bond.  Though it makes up a large portion of the air we breathe, most living organisms can’t access it in this form. 
+                Atmospheric nitrogen must go through a natural process called nitrogen fixation to transform before it can be used for plant nutrition.</p>
+        </div>
+        <div class='col22'>
+            <img class='img' align='right' src='/static/img/nitrogen2.jpg' height='200px' width='400px'>
+        </div>
+    </div>
+
+    <img class='graph m-5' src='/static/img/nitrogen-graph1.jpeg' height='300px' width='500px'>
+    <img class='graph m-5' src='/static/img/nitrogen-graph2.jpeg' height='300px' width='500px'>
+</div>
+
+<div class='container'>
+    <h3 style='color:#14420a'> 6. Phosporous on Soil </h3>
+    <div style='height:10px'>
+    </div>
+    <div class='row1'>
+        <div class='col11'>
+            <img class='img' src='/static/img/fosfo1.jpeg' height='200px' width='400px'>
+        </div>
+        <div class='col12' style='background-color:#e5fcde'>
+            <p>Phosphorus (P) availability in soils limits crop yields in many regions of the World, while excess of soil P triggers aquatic 
+                eutrophication in other regions. Numerous processes drive the global spatial distribution of P in agricultural soils, but their 
+                relative roles remain unclear. Here, we combined several global data sets describing these drivers with a soil P dynamics 
+                model to simulate the distribution of P in agricultural soils and to assess the contributions of the different drivers at the 
+                global scale. We analysed both the labile inorganic P (PILAB ), a proxy of the pool involved in plant nutrition and the total 
+                soil P (PTOT ).</p>
+        </div>
+    </div>
+
+    <div style='height:50px'>
+    </div>
+
+    <div class='row2'>
+        <div class='col21' style='background-color:#e5fcde'>
+            <p>When the spatial variability was computed between grid cells at half-degree resolution, we found that almost all of the PTOT 
+                spatial variability could be explained by BIOG, while BIOG and FARM explained 38% and 63% of PILAB spatial variability, 
+                respectively. Our work also showed that the driver contribution was sensitive to the spatial scale characterizing the 
+                variability (grid cell vs. continent) and to the region of interest (global vs. tropics for instance). In particular, the 
+                heterogeneity of farming practices between continents was large enough to make FARM contribute to the variability in 
+                PTOT at that scale. We thus demonstrated how the different drivers were combined to explain the global distribution of 
+                agricultural soil P. </p>
+        </div>
+        <div class='col22'>
+            <img class='img' align='right' src='/static/img/fosfo2.jpeg' height='200px' width='400px'>
+        </div>
+    </div>
+
+    <img class='graph m-5' src='/static/img/phospho-graph1.jpeg' height='300px' width='500px'>
+    <img class='graph m-5' src='/static/img/phospho-graph2.jpeg' height='300px' width='500px'>
+</div>
+
+<div class='container'>
+    <h3 style='color:#14420a'> 7. Potassium on Soil </h3>
+    <div style='height:10px'>
+    </div>
+    <div class='row1'>
+        <div class='col11'>
+            <img class='img' src='/static/img/pota2.jpeg' height='200px' width='400px'>
+        </div>
+        <div class='col12' style='background-color:#e5fcde'>
+            <p>Potassium occurs in the soil in three forms: as exchangeable (available) potassium (K+) adsorbed onto the soil CEC; 
+                fixed by certain minerals from which it is released very slowly to available form; and in unavailable mineral forms 
+                (most of the potassium in soils, often 40,000 lbs. per acre or more). Plants take up potassium as the K+ ion. Over time 
+                "slowly available K" is released replacing exchangeable K; however, plants cannot use much of this form of K in a 
+                single growing season.</p>
+        </div>
+    </div>
+
+    <div style='height:50px'>
+    </div>
+
+    <div class='row2'>
+        <div class='col21' style='background-color:#e5fcde'>
+            <p>Potassium is between N and P in mobility. It is not lost as readily as N, but it will move into the soil to the roots more 
+                quickly than P. Potassium fertilizers are most effective if applied ahead of planting or as topdressing on perennial 
+                forage crops. Because of the salt concern, the amount of K that can be safely applied in a starter band is limited. </p>
+        </div>
+        <div class='col22'>
+            <img class='img' align='right' src='/static/img/pota1.jpeg' height='200px' width='400px'>
+        </div>
+    </div>
+
+    <img class='graph m-5' src='/static/img/potassium-graph1.jpeg' height='300px' width='500px'>
+    <img class='graph m-5' src='/static/img/potassium-graph2.jpeg' height='300px' width='500px'>
+</div>
+{% endblock body %}

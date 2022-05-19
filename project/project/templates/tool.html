@@ -1,0 +1,218 @@
+{% extends 'base.html'  %}
+
+{% block title%} MLmodel {% endblock title%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a target='_blank' class="dropdown-item" href="https://icar.gov.in/content/food-packaging-technology">Packaging</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://www.downtoearth.org.in/blog/agriculture/on-a-tardy-trail-state-of-organic-farming-in-india-73269">Organic Farming</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://india.mongabay.com/2020/05/an-online-network-emerges-during-the-lockdown-connecting-farmers-directly-with-customers/">Delivering</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://ucanr.edu/sites/UrbanAg/Production/Planting/">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock nav %}
+
+{% block body %}
+    <div class="container-fluid px-0">
+      <div class="py-5 text-center" style='background-color:#e5fcde'>
+        <h1 style='color:#14420a'>Predictor Tool</h1>
+        <p class="lead">  It's time to use our predictor tool to predict which crop to harvest.</p>
+      </div>
+    </div>
+
+    <div class='container'>
+      <div class='row'>
+        <div class='col'>
+          <div class="p-4">
+            <h4 class="mb-3">Input Parameters</h4>
+    
+            <form method='post' action='/project/tool'>
+            {% csrf_token %}
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="nitrogen" class="form-label">Nitrogen Content in Soil</label>
+                  <input type="number" step='1' class="form-control" id="nitrogen" name='nitrogen' value={{nitrogen}}>
+                </div>
+              </div>
+    
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="phosphorous" class="form-label">Phosporous Content in Soil</label>
+                  <input type="number" step='1' class="form-control" id="phosphorous" name='phosphorous' value={{phosphorous}}>
+                </div>
+              </div>
+    
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="potassium" class="form-label">Potassium Content in Soil</label>
+                  <input type="number" step='1' class="form-control" id="potassium" name='potassium' value={{potassium}}>
+                </div>
+              </div>
+    
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="temp" class="form-label">Temperature</label>
+                  <input type="number" step='1' class="form-control" id="temp" name='temp' value={{temp}}>
+                </div>
+              </div>
+    
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="humidity" class="form-label">Humidity</label>
+                  <input type="number" step='1' class="form-control" id="humidity" name='humidity' value={{humidity}}>
+                </div>
+              </div>
+    
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="pH" class="form-label">pH</label>
+                  <input type="number" step='1' class="form-control" id="pH" name='pH' value={{pH}}>
+                </div>
+              </div>
+    
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="rainfall" class="form-label">Rainfall</label>
+                  <input type="number" step='1' class="form-control" id="rainfall" name='rainfall' value={{rainfall}}>
+                </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="model" class="form-label">ML Model</label>
+                  <input type="text" class="form-control" id="model" name='model' value={{model}}>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary my-4">Submit</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class='col'>
+          {% if result %}
+          <div style='padding-top:200px'>
+            <div class="p-5 text-white rounded-3" style='background-color:#e5fcde'>
+              <h1 style='color:#14420a'>Predicted Crop:-  {{result}} &#128515;</h1>
+              {% if model == 'Logistic Regression' %}
+              <h3 style='color:#14420a'>Accuracy:-  96.82%</h3>
+              {% endif %}
+              {% if model == 'Linear Regression' %}
+              <h3 style='color:#14420a'>Accuracy:-  89.82%</h3>
+              {% endif %}
+              {% if model == 'Decision Tree' %}
+              <h3 style='color:#14420a'>Accuracy:-  90.15%</h3>
+              {% endif %}
+              {% if model == 'K Neighbors Nearest' %}
+              <h3 style='color:#14420a'>Accuracy:- 92.8%</h3>
+              {% endif %}
+              {% if result == 'rice' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=rice'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'maize' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=maize'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'chickpea' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=chcikpea'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'kidneybeans' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=kidneybeans'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'pigeonpeas' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=pigeonpeas'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'mungbean' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=mungbean'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'blackgram' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=blackgram'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'lentil' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=lentil'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'mothbeans' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=mothbeans'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'pomegranate' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=pomegranate'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'banana' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=banana'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'mango' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=mango'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'grapes' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=grapes'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'watermelon' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=watermelon'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'muskmelon' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=muskmelon'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'apple' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=apple'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'orange' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=orange'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'coconut' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=coconut'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'cotton' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=cotton'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'jute' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=jute'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'coffee' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=coffee'>Click to know more -> </a> </h5>
+              {% endif %}
+              {% if result == 'papaya' %}
+              <h5 class='py-2'> <a target='_blank' href='https://www.google.com/search?q=papaya'>Click to know more -> </a> </h5>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    
+    
+{% endblock body %}

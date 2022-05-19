@@ -1,0 +1,25 @@
+main{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 15px;
+  }
+  th {
+    background-color: #04AA6D;
+    color: white;
+  }
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  

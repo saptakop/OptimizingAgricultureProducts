@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Food Officers</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class='container'>
+            <br>
+            <form method='post' action='/officers/104'>
+              {% csrf_token %}
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="name" class="form-control" id="name" value="Pratap Kumar Pal" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="state" class="form-label">State</label>
+                    <input type="state" class="form-control" id="state" value="West Bengal" disabled>
+                  </div>
+                <div class="mb-3">
+                  <label for="phoneNo" class="form-label">Phone No</label>
+                  <input type="phoneNo" class="form-control" id="phoneNo" value="03322255642" disabled>
+                </div>
+                <div class="mb-3">
+                  <label for="request" class="form-label">Request From Name</label>
+                  <input type="request" class="form-control" id="request" name="request" value="user">
+                </div>
+                <div class="mb-3">
+                  <label for="requestEmail" class="form-label">Request From Email</label>
+                  <input type="requestEmail" class="form-control" id="requestEmail" name="requestEmail" value="user@gmail.com">
+                </div>
+                <div class="mb-3">
+                  <label for="quality" class="form-label">Give Quality</label>
+                  <input type="quality" class="form-control" id="quality" name="quality">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

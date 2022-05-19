@@ -1,0 +1,163 @@
+{% extends 'base.html'  %}
+
+{% block title%} Book Food Officer {% endblock title%}
+
+{% block css%}
+{% load static %}
+<link rel='stylesheet' href='{% static 'survey.css'%}'>
+{% endblock css%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a target='_blank' class="dropdown-item" href="https://icar.gov.in/content/food-packaging-technology">Packaging</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://www.downtoearth.org.in/blog/agriculture/on-a-tardy-trail-state-of-organic-farming-in-india-73269">Organic Farming</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://india.mongabay.com/2020/05/an-online-network-emerges-during-the-lockdown-connecting-farmers-directly-with-customers/">Delivering</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://ucanr.edu/sites/UrbanAg/Production/Planting/">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/dashboard">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock nav %}
+
+{% block body%}
+<main>
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white " style="width: 280px; height:715px; background-color:#e5fcde;">
+        <span style="color:black" class="fs-4">user@gmail.com</span>
+        <hr style="color:black">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="/dashboard" class="nav-link" style="color:black" aria-current="page">
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="/profile" class="nav-link" style="color:black">
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="/grow-crop" class="nav-link" style="color:black">
+              Grow Your Crop
+            </a>
+          </li>
+          <li>
+            <a href="/videos" class="nav-link" style="color:black">
+              Videos
+            </a>
+          </li>
+          <li>
+            <a href="/book-officer" class="nav-link"  style="color:black">
+              Book Food Officer
+            </a>
+          </li>
+          <li>
+            <a href="/selling" class="nav-link" style="color:black">
+              Selling
+            </a>
+          </li>
+          <li>
+            <a href="/survey" class="nav-link  active text-white">
+              Take Survey
+            </a>
+          </li>
+        </ul>
+        <hr style="color:black">
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/static/img/profile-logo1.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong style="color:black">user</strong>
+          </a>
+        </div>
+    </div>
+    <div class='container'>
+        <div class='container'>
+          <div id="outside">
+            <form id="survey-form" action="/survey" method="post">
+              {% csrf_token %}
+              <h1 id="title">Let's Take a Quick Survey</h1>
+              
+              <fieldset>
+                <legend style="padding-left:10px;">Personal Information</legend>
+                <div>
+                  <label style="padding-left:10px;" id="name-label" for="name">Name:</label>
+                  <input type="text" required id="name" name="name" placeholder="Enter name here">   
+                </div>
+
+                <div>
+                  <label style="padding-left:10px;" id="email-label" for="Email">Email:</label>
+                  <input type="email" required id="email" name="email" placeholder="Enter email here">   
+                </div>
+
+              </fieldset>
+              
+              <fieldset>
+                <legend style="padding-left:10px;">Harvest Information</legend>
+                <div>
+                  <label style="padding-left:10px;" for="date-label">Date You Started Harvesting:</label>
+                  <input type="date" name="sdate">
+                </div>
+
+                <div>
+                  <label style="padding-left:10px;" for="date-label">Date You Finished Harvesting:</label>
+                  <input type="date" name="edate">
+                </div>
+
+                <div>
+                  <label style="padding-left:10px;" for="politics">Crop Quality:</label>
+                  <select id="dropdown">
+                    <option value="left">Excelent</option>
+                    <option value="right">Good</option>
+                    <option value="conservative">Medium</option>
+                    <option value="nazi">Low</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="msg"></label>
+                  <p style="padding-left:10px;" \> Want to say more?</p>
+                  <textarea id="msg" name="desc" rows="4" cols="50" placeholder="Enter Text Here"></textarea>   
+                </div>
+                
+              </fieldset>
+            
+              <div id="submitbutton">
+                <button type="submit" id="submit">Submit the Survey form</button>   </div>
+            
+            </form>
+              </div>
+        </div>
+    </div>
+</main>
+{% endblock body%}

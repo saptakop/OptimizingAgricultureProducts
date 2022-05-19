@@ -1,0 +1,209 @@
+{% extends 'base.html'  %}
+
+{% block title%} Book Food Officer {% endblock title%}
+
+{% block css%}
+{% load static %}
+<link rel='stylesheet' href='{% static 'profile.css'%}'>
+{% endblock css%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a target='_blank' class="dropdown-item" href="https://icar.gov.in/content/food-packaging-technology">Packaging</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://www.downtoearth.org.in/blog/agriculture/on-a-tardy-trail-state-of-organic-farming-in-india-73269">Organic Farming</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://india.mongabay.com/2020/05/an-online-network-emerges-during-the-lockdown-connecting-farmers-directly-with-customers/">Delivering</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://ucanr.edu/sites/UrbanAg/Production/Planting/">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/dashboard">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock nav %}
+
+{% block body%}
+<main>
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white " style="width: 280px; height:715px; background-color:#e5fcde;">
+        <span style="color:black" class="fs-4">user@gmail.com</span>
+        <hr style="color:black">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="/dashboard" class="nav-link" style="color:black" aria-current="page">
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="/profile" class="nav-link active text-white">
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="/grow-crop" class="nav-link" style="color:black">
+              Grow Your Crop
+            </a>
+          </li>
+          <li>
+            <a href="/videos" class="nav-link" style="color:black">
+              Videos
+            </a>
+          </li>
+          <li>
+            <a href="/book-officer" class="nav-link"  style="color:black">
+              Book Food Officer
+            </a>
+          </li>
+          <li>
+            <a href="/selling" class="nav-link" style="color:black">
+              Selling
+            </a>
+          </li>
+          <li>
+            <a href="/survey" class="nav-link" style="color:black">
+              Take Survey
+            </a>
+          </li>
+        </ul>
+        <hr style="color:black">
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/static/img/profile-logo1.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong style="color:black">user</strong>
+          </a>
+        </div>
+    </div>
+    <div class='container'>
+        {% comment %} <br>
+        <div>
+            <img class='rounded-circle' style="height:100px; width:100px" src="/static/img/quality-rice.png">
+            Congrats, It's a great choice to harvest rice. Wish you the best.
+        </div>
+        <hr>
+        {% comment %} <div class='container'>
+            <h1>Profile</h1>
+        </div> {% endcomment %}
+        <div class="student-profile py-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card shadow-sm">
+                  <div class="card-header bg-transparent text-center">
+                    <img class="profile_img" src="https://media.gettyimages.com/photos/farmer-in-agricultural-field-picture-id1205325344?s=612x612" alt="farmer dp">
+                    <h3>user</h3>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-0"><strong class="pr-1">Farmer ID:</strong>000000001</p>
+                    <p class="mb-0"><strong class="pr-1">Area Pincode:</strong>711510</p>
+                    <p class="mb-0"><strong class="pr-1">Crop growing:</strong>Rice</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="card shadow-sm">
+                  <div class="card-header bg-transparent border-0">
+                    <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+                  </div>
+                  <div class="card-body pt-0">
+                    <table class="table table-bordered">
+                      <tr>
+                        <th width="30%">Name</th>
+                        <td width="2%">:</td>
+                        <td>user</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Registration Year	</th>
+                        <td width="2%">:</td>
+                        <td>2022</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Gender</th>
+                        <td width="2%">:</td>
+                        <td>Male</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Address</th>
+                        <td width="2%">:</td>
+                        <td>Howrah</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Email</th>
+                        <td width="2%">:</td>
+                        <td>user@gmail.com</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                  <div style="height: 26px"></div>
+                <div class="card shadow-sm">
+                  <div class="card-header bg-transparent border-0">
+                    <h3 class="mb-0"><i class="far fa-clone pr-1"></i>About</h3>
+                  </div>
+                  <div class="card-body pt-0">
+                      <p>I am user. I left my IT career and now I started farming on my own farm. I wanted to do something which is beneficial for human health by growing high quality food. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div style="height: 66px"></div>
+                <div class="card shadow-sm">
+                  <div class="card-header bg-transparent border-0">
+                    <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Other Information</h3>
+                  </div>
+                  <div class="card-body pt-0">
+                    <table class="table table-bordered">
+                      <tr>
+                        <th width="30%">Crops Grown</th>
+                        <td width="2%">:</td>
+                        <td>rice,jute,coffee</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Total Amount</th>
+                        <td width="2%">:</td>
+                        <td>20 Ton</td>
+                      </tr>
+                      <tr>
+                        <th width="30%">Total Sale</th>
+                        <td width="2%">:</td>
+                        <td>Rs.100000</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</main>
+{% endblock body%}

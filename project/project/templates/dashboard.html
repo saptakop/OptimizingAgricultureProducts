@@ -1,0 +1,171 @@
+{% extends 'base.html'  %}
+
+{% block title%} Dashboard {% endblock title%}
+
+{% block css%}
+{% load static %}
+<link rel='stylesheet' href='{% static 'quality.css'%}'>
+{% endblock css%}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='/static/img/logo2.png' width='40' height='40'>  AgriCulture</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a target='_blank' class="dropdown-item" href="https://icar.gov.in/content/food-packaging-technology">Packaging</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://www.downtoearth.org.in/blog/agriculture/on-a-tardy-trail-state-of-organic-farming-in-india-73269">Organic Farming</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://india.mongabay.com/2020/05/an-online-network-emerges-during-the-lockdown-connecting-farmers-directly-with-customers/">Delivering</a></li>
+            <li><a target='_blank' class="dropdown-item" href="https://ucanr.edu/sites/UrbanAg/Production/Planting/">Planting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/project">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/dashboard">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock nav %}
+
+{% block body%}
+<main>
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white " style="width: 280px; height:715px; background-color:#e5fcde;">
+        <span style="color:black" class="fs-4">user@gmail.com</span>
+        <hr style="color:black">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="/dashboard" class="nav-link active text-white" aria-current="page">
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="/profile" class="nav-link" style="color:black">
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="/grow-crop" class="nav-link" style="color:black">
+              Grow Your Crop
+            </a>
+          </li>
+          <li>
+            <a href="/videos" class="nav-link" style="color:black">
+              Videos
+            </a>
+          </li>
+          <li>
+            <a href="/book-officer" class="nav-link" style="color:black">
+              Book Food Officer
+            </a>
+          </li>
+          <li>
+            <a href="/selling" class="nav-link" style="color:black">
+              Selling
+            </a>
+          </li>
+          <li>
+            <a href="/survey" class="nav-link" style="color:black">
+              Take Survey
+            </a>
+          </li>
+        </ul>
+        <hr style="color:black">
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/static/img/profile-logo1.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong style="color:black">user</strong>
+          </a>
+        </div>
+    </div>
+    <div class='container'>
+        <br>
+        <div>
+            <img class='rounded-circle' style="height:100px; width:100px" src="/static/img/quality-rice.png">
+            Congrats, It's a great choice to harvest rice. Wish you the best.
+        </div>
+        <hr>
+        <div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class='m-4'>
+                    <a style="text-decoration: none; color:black;" href='/profile'>
+                      <img src="/static/img/view-profile.jpg" style="height:150px; width:200px" >       
+                      <p style="padding-left:50px; padding-top:15px;">Profile</p>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col">
+                    <div class='m-4'>
+                      <a style="text-decoration: none; color:black;" href='/grow-crop'>
+                        <img src="/static/img/grow.jpg" style="height:150px; width:200px" >       
+                        <p style="padding-left:20px; padding-top:15px;">Grow Your Crop</p>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class='m-4'>
+                      <a style="text-decoration: none; color:black;" href='/videos'>
+                        <img src="/static/img/videos.png" style="height:150px; width:150px" >       
+                        <p style="padding-left:55px; padding-top:15px;">Videos</p>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class='m-4'>
+                      <a style="text-decoration: none; color:black;" href='/book-officer'>
+                        <img src="/static/img/book.jpg" style="height:150px; width:200px" >       
+                        <p style="padding-left:9px; padding-top:15px;">Book Food Officer</p>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class='m-4'>
+                      <a style="text-decoration: none; color:black;" href='/selling'>
+                        <img src="/static/img/selling.png" style="height:150px; width:150px" >       
+                        <p style="padding-left:50px; padding-top:15px;">Selling</p>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class='m-4'>
+                      <a style="text-decoration: none; color:black;" href='/survey'>
+                        <img src="/static/img/survey.png" style="height:150px; width:200px" >       
+                        <p style="padding-left:35px; padding-top:15px;">Take Survey</p>
+                      </a>
+                    </div>
+                </div>
+
+              </div>
+        </div>
+    </div>
+</main>
+{% endblock body%}
